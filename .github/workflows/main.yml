@@ -1,0 +1,38 @@
+name: Configurao-CI
+
+# Quando rodar o workflow
+on:
+  # vai se aplicar tanto em pull-request como em push na main
+  pull-request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+# Jobs(tarefas) que o CI vai executar
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1-Baixar código do repositório
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      # 2-Configurar o Node
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 3-Instalar dependências
+      - name: Instalar dependências
+        run: npm install
+
+      # 4-Executar testes automáticos
+      - name: Rodar testes
+        run: npm teste
+
+
+
+
