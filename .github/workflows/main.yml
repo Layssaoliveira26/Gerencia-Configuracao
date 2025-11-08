@@ -3,7 +3,7 @@ name: Configurao-CI
 # Quando rodar o workflow
 on:
   # vai se aplicar tanto em pull-request como em push na main
-  pull-request:
+  pull_request:
     branches:
       - main
   push:
