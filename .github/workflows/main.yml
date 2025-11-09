@@ -31,7 +31,7 @@ jobs:
 
       # 4-Executar testes automáticos
       - name: Rodar testes
-        run: npm teste
+        run: npm test
 
 
 
