@@ -1,1 +1,1 @@
-# Apaguei
+# Apenas configurações iniciais
